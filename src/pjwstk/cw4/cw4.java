@@ -160,18 +160,21 @@ public class cw4 {
     public static void zlicz(char tab[]){
         
         int licznik = tab.length+1;
-       
-        System.out.println("zdanie zawiera "+licznik+" znakow");
-        System.out.println("wystapienia");
         int tmp=0;
-        
+        String zdanie="";
+        for(int i=0;i<tab.length;i++){
+            zdanie += Character.toString(tab[i]);
+        }
+        System.out.println("Zdanie: " + zdanie);
+        System.out.println("zawiera "+licznik+" znaki");
+        System.out.println("wystapienia liter");
         
         for(char i='a';i<='z';i++){
 
             for(char j:tab){
                 
                 char c = Character.toLowerCase(j);
-                
+                zdanie = zdanie + Character.toString(j);
                 if(c==i){
                     
                     tmp++;
@@ -182,6 +185,7 @@ public class cw4 {
         tmp=0;
         
         }
+        
     }
    
     public static void main(String[] args) {
@@ -201,14 +205,14 @@ public class cw4 {
        
        
        
-       //utworzenie tabeli wielowym
+    //utworzenie tabeli wielowym
        
        int[][] tabn = {tab1,tab2,tab3,tab4};
        //wydruk tabeli3w
        System.out.println("tablica wielowymiarowa");
        drukuj(tabn);
     
-// zad6.2
+    // zad6.2
        int[][] tabn1= new int[4][5];
        
        for(int i =0; i<tabn1.length;i++){
@@ -219,10 +223,10 @@ public class cw4 {
            }
        }
     drukuj(tabn1);
-//zad6.3
+    //zad6.3
     
     min(tabn1);
-//zad6.4
+    //zad6.4
     
     int[][] tabn2= new int[7][7];
     
@@ -253,7 +257,7 @@ public class cw4 {
     
     //zad 6.7
     
-    char[] zdanie = {'A','l','a',' ','m','a',' ','k','o','t','a',};
+    char[] zdanie = {'A','l','a',' ','m','a',' ','k','o','t','a',' ','k','o','t',' ','m','a',' ','A','l','e'};
     zlicz(zdanie);
     
 }
