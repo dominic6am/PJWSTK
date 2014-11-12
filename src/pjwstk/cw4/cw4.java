@@ -157,16 +157,16 @@ public class cw4 {
     }
     
     //Zad 6.7
-    public static void zlicz(char tab[]){
+    public static void zlicz(String zdanie ){
         
+        char[] tab = zdanie.toCharArray();
         int licznik = tab.length+1;
         int tmp=0;
-        String zdanie="";
-        for(int i=0;i<tab.length;i++){
-            zdanie += Character.toString(tab[i]);
-        }
-        System.out.println("Zdanie: " + zdanie);
-        System.out.println("zawiera "+licznik+" znaki");
+        
+        
+        System.out.print("Zdanie: " + zdanie);
+        System.out.print(" zawiera "+licznik+" znaki");
+        System.out.println();
         System.out.println("wystapienia liter");
         
         for(char i='a';i<='z';i++){
@@ -174,18 +174,18 @@ public class cw4 {
             for(char j:tab){
                 
                 char c = Character.toLowerCase(j);
-                zdanie = zdanie + Character.toString(j);
+              
                 if(c==i){
                     
                     tmp++;
                 }
             }
         if(tmp>0)
-        System.out.println(i+" = "+tmp);
+        System.out.print(i+" = "+tmp+ ", ");
         tmp=0;
         
         }
-        
+         System.out.println();
     }
    
     public static void main(String[] args) {
@@ -257,8 +257,9 @@ public class cw4 {
     
     //zad 6.7
     
-    char[] zdanie = {'A','l','a',' ','m','a',' ','k','o','t','a',' ','k','o','t',' ','m','a',' ','A','l','e'};
-    zlicz(zdanie);
+    
+    
+    zlicz("Ala ma kota kot ma Ale");
     
 }
     
