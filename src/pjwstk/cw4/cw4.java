@@ -259,7 +259,7 @@ public class cw4 {
     
     
     
-    zlicz("Ala ma kota kot ma Ale");
+    zlicz("Ala ma kota, kot ma Ale.");
     
 }
     
