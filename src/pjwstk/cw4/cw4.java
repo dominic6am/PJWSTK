@@ -82,6 +82,7 @@ public class cw4 {
         //zwraca tablice elementow z liczbami ktore sa przekatnymi wielowymiarowej tablicy wejsciowej 
         //dziala tylko na nieparzystych tablicach kwadratowych
         
+       if((tab.length%2>0 && tab.length==tab[0].length)){
         
         int x=-1;
         int y=-1;
@@ -119,7 +120,16 @@ public class cw4 {
                 tabZwracana[i]=tab[x][y];   
             }   
         }
-        return tabZwracana;
+            return tabZwracana;
+       }
+       else{
+            
+           System.out.println("Tablica musi być nieparzysta i kwadratowa");
+  
+           int[] tabZwracana = new int[0];
+           return tabZwracana;
+       }
+             
     }
     
     public static void spr(int tab[]){
@@ -228,7 +238,7 @@ public class cw4 {
     min(tabn1);
     //zad6.4
     
-    int[][] tabn2= new int[7][7];
+    int[][] tabn2= new int[9][9];
     
     for(int i =0; i<tabn2.length;i++){
            
@@ -260,6 +270,18 @@ public class cw4 {
     
     
     zlicz("Ala ma kota, kot ma Ale.");
+    zlicz("GeForce GTX 970 i GeForce GTX 980, to w tej chwili jedne z najnowocześniejszych akceleratorów, "
+            + "jakie możemy znaleźć na rynku. Oprócz odpowiedniej wydajności cechują się szeregiem funkcji "
+            + "(DSR, VXGI, G-sync) i usprawnień. Najwięcej mówi się o niskim poborze prądu, nawet o 100 W niższym od starszej "
+            + "generacji i kart graficznych konkurencji. Główne skrzypce gra flagowy model Nvidii, czyli GeForce GTX 980. "
+            + "Jego rdzeń skrywa 5,2 mld tranzystorów na powierzchni 398 mm2 i jest wytwarzany w procesie technologicznym 28 nm. "
+            + "Uwagę zwraca świetne TDP na poziomie 165 W. W GeForce GTX 980 znajduje się 2048 procesorów strumieniowych (CUDA Cores) "
+            + "rozmieszczonych w 16 blokach SM. Standardowa częstotliwość taktowania wynosi 1126/1750 MHz. Na pokładzie znajdują się "
+            + "4 GB pamięci operacyjnej 256-bit GDDR5. W przypadku układu graficznego GeForce GTX 970 użyto 13 bloków SM, co daje "
+            + "łącznie 1664 procesorów strumieniowych. TDP wynoszące 145 W to tyle, co karty graficzne poprzedniej generacji ze "
+            + "średniego segmentu. Standardowe taktowanie w tym przypadku wynosi 1050/1750 MHz, a na pokładzie są 4 GB pamięci "
+            + "GDDR5-256 bit. O tym wszystkim pisaliśmy w premierowych artykule, "
+            + "a dziś z bliska przyjrzymy się akceleratorom przerobionym przez Asusa, Gigabyte i Zotac'a.");
     
 }
     
